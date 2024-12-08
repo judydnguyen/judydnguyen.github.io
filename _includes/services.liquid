@@ -1,0 +1,30 @@
+<div class="services">
+  {% if site.services != blank %}
+    {% assign services = site.services | reverse %}
+    {% assign categories = services | map: "category" | uniq %}
+
+    {% for category in categories %}
+      <h2 class="category">{{ category }}</h2>
+      <div class="table-responsive">
+        <table class="table table-sm table-borderless">
+          {% for service in services %}
+            {% if service.category == category %}
+              <tr>
+                <th scope="row" style="width: 20%">{{ service.year }}</th>
+                <td>
+                  {% if service.inline %}
+                    {{ service.content | remove: '<p>' | remove: '</p>' | emojify }}
+                  {% else %}
+                    <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </table>
+      </div>
+    {% endfor %}
+  {% else %}
+    <p>No services available at the moment...</p>
+  {% endif %}
+</div>
