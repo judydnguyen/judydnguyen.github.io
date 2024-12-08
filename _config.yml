@@ -175,6 +175,12 @@ collections:
       layout: post
     output: true
     permalink: /services/:path/
+  experiences:
+    output: true
+    permalink: /experiences/:path/
+    defaults:
+      layout: post
+
 
 announcements:
   enabled: true
@@ -186,6 +192,11 @@ services:
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 50 # leave blank to include all the news in the `_services` folder
 
+experiences:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 10 # leave blank to include all the news in the `_experiences` folder
+  
 latest_posts:
   enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items

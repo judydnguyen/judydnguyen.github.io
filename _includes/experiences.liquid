@@ -1,0 +1,41 @@
+<div class="experiences">
+  {% if site.experiences %}
+    <div class="experiences-list">
+      {% assign sorted_experiences = site.experiences | sort: "start_date" | reverse %}
+      {% for experience in sorted_experiences %}
+        <div class="experience-item row">
+          <!-- Time Section -->
+          <div class="col-md-3 text-muted">
+            <p class="experience-time">{{ experience.start_date }} - {{ experience.end_date }}</p>
+            {% if experience.location %}
+              <p class="experience-location text-secondary">{{ experience.location }}</p>
+            {% endif %}
+          </div>
+
+          <!-- Details Section -->
+          <div class="col-md-9">
+            <h4><a href="#" rel="external nofollow noopener" target="_blank">{{ experience.title }}</a></h4>
+            <p>
+              <strong>
+                {% if experience.company_url %}
+                  <a href="{{ experience.company_url }}" target="_blank" rel="external nofollow noopener">{{ experience.company }}</a>
+                {% else %}
+                  {{ experience.company }}
+                {% endif %}
+              </strong>
+            </p>
+            <ul>
+              {% for bullet in experience.descriptions %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+            <p class="skills"><em>Skills: {{ experience.skills }}</em></p>
+          </div>
+        </div>
+        <hr> <!-- Add a separator between experiences -->
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No experiences available at the moment.</p>
+  {% endif %}
+</div>
