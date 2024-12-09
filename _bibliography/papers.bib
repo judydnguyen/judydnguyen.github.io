@@ -10,6 +10,7 @@
   booktitle={Proceedings of the 51st International Conference on Parallel Processing},
   pages={1--11},
   year={2022},
+  preview={feddrl.png},
   abstract={To deal with non-IID data, particularly the cluster-skewed data, we propose FedDRL, a novel FL model that employs deep reinforcement learning to adaptively determine each client's impact factor (which will be used as the weights in the aggregation process). Extensive experiments on a suite of federated datasets confirm that the proposed FedDRL improves favorably against FedAvg and FedProx methods, e.g., up to 4.05% and 2.17% on average for the CIFAR-100 dataset, respectively.},
   pdf={https://dl.acm.org/doi/10.1145/3545008.3545085},
 
@@ -25,6 +26,7 @@
   pages={1186--1197},
   year={2021},
   selected={true},
+  preview={jolot.png},
   publisher={IEEE},
   abstract={Wireless rechargeable sensor networks (WRSNs)
 have emerged as a potential solution to solve the challenge of prolonging battery-powered sensor networks’ lifetime. In a WRSN,
@@ -51,6 +53,7 @@ among the others is 8.29 times.},
   year={2024},
   selected={true},
   publisher={Elsevier},
+  preview={backdoor-survey.png},
   pdf={https://www.sciencedirect.com/science/article/pii/S0952197623013507},
   abstract={Federated learning (FL) has emerged as a promising paradigm for training machine learning models on decentralized data. However, FL is vulnerable to backdoor attacks, where a malicious client injects a backdoor pattern into its local data to manipulate the global model. This paper provides a comprehensive survey of backdoor attacks and defenses in FL. We first introduce the background of FL and backdoor attacks, followed by a detailed review of existing backdoor attacks and defenses in FL. We then discuss the challenges and future research directions in this area. Finally, we provide a summary of the surveyed works and suggest potential research directions for future studies.}
 }
@@ -74,6 +77,7 @@ among the others is 8.29 times.},
   author={Nguyen, Thuy Dung and Nguyen, Tuan A and Tran, Anh and Doan, Khoa D and Wong, Kok-Seng},
   journal={Advances in Neural Information Processing Systems},
   volume={36},
+  preview={iba.png},
   year={2024},
   selected={true},
   abstract={We propose a novel backdoor attack framework in FL, the Irreversible Backdoor Attack (IBA), that jointly learns the optimal and visually stealthy trigger and then gradually implants the backdoor into a global model. This approach allows the adversary to execute a backdoor attack that can evade both human and machine inspections. Additionally, we enhance the efficiency and durability of the proposed attack by selectively poisoning the model's parameters that are least likely updated by the main task's learning process and constraining the poisoned model update to the vicinity of the global model. },
@@ -115,7 +119,7 @@ among the others is 8.29 times.},
   abstract={This research introduces PBP, a post-training defense for malware classifiers to mitigate backdoor poisoning attacks without relying on specific embedding mechanisms. By regulating batch normalization statistics to correct activation distribution distortions caused by backdoors, PBP effectively restores model performance to a clean state. Experiments show that PBP reduces attack success rates from 100% to nearly 0% using just 1% of training data, significantly outperforming state-of-the-art methods.},
   abbr={NDSS},
   selected={true},
-  preview={brownian-motion.gif},
+  preview={pbp.png},
   image={https://www.ndss-symposium.org/wp-content/uploads/2021/09/ndss2022-logo.png}
 }
 
@@ -142,6 +146,7 @@ existing methods have difficulty in balancing unlearn time and efficacy.},
   organization={IEEE},
   abstract={We propose FedGrad, a novel backdoor-resistant defense for FL that is resistant to cutting-edge backdoor attacks, including the edge-case attack, and performs effectively under heterogeneous client data and a large number of compromised clients. FedGrad is designed as a two-layer filtering mechanism that thoroughly analyzes the ultimate layer's gradient to identify suspicious local updates and remove them from the aggregation process. We evaluate FedGrad under different attack scenarios and show that it significantly outperforms state-of-the-art defense mechanisms. Notably, FedGrad can almost 100% correctly detect the malicious participants, thus providing a significant reduction in the backdoor effect (e.g., backdoor accuracy is less than 8%) while not reducing the main accuracy on the primary task.},
   selected={true},
+  preview={fedgrad.png},
   pdf={https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10191655},
   code={https://github.com/judydnguyen/FedGrad_Backdoor_Attack}
 }
