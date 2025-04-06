@@ -19,6 +19,4 @@ Previously, I received my Bachelor's degree from [School of Information and Comm
 
 Growing up, I was fascinated by sci-fi depictions of uncontrollable AI and rogue robots, which led me to ask: **How can we ensure AI remains safe and aligned with human values?** My research explores adversarial, privacy, and ethical vulnerabilities in both centralized and decentralized ML/AI systems, with a focus on developing practical solutions to mitigate these risks. I strongly believe that AI should serve humanity by making people feel both happy and safe.
 
-Beyond research, I am passionate about photography, books, and music, and I never say no to new adventures!
-
-*How to pronounce my Viet name (Dung): /zʊŋ/*
+Beyond research, I am passionate about photography, books, and music, and I never say no to new adventures! *How to pronounce my Viet name (Dung): /zʊŋ/*
