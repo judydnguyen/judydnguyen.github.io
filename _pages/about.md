@@ -14,7 +14,7 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-## Howdy!
+**Howdy!**
 
 I'm Judy | CS Ph.D. student @ Vanderbilt | [SoICT](https://soict.hust.edu.vn/en/) alum | [VinUni](https://vinuni.edu.vn/) research alumni | Vietnamese blood in me.
 Advised by [Prof. Taylor T. Johnson](http://www.taylortjohnson.com/) & [Prof. Kevin Leach](https://kjl.name/).
