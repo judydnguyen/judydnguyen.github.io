@@ -16,7 +16,7 @@ social: true # includes social icons at the bottom of the page
 ---
 **Howdy!**
 
-I'm Judy | CS Ph.D. student @ Vanderbilt | [SoICT](https://soict.hust.edu.vn/en/) alum | [VinUni](https://vinuni.edu.vn/) research alumni | Vietnamese blood in me.
+I'm Judy | CS Ph.D. student @ Vanderbilt | [SoICT](https://soict.hust.edu.vn/en/) alum | [VinUni](https://vinuni.edu.vn/) research alum | Vietnamese blood in me.
 Advised by [Prof. Taylor T. Johnson](http://www.taylortjohnson.com/) & [Prof. Kevin Leach](https://kjl.name/).
 
 **About myself.** I've spent a lot of time figuring out the right way to live the life I want, and it comes down to something simple: doing work that's impactful and meaningful. Looking back, the pieces of my childhood dreams that once felt divergent are now starting to intertwine. Much of this comes from my obsession with sci-fi movies about AI and endlessly automated, replicated "everything"—a fascination that inspired the question driving my research: [*How can we ensure AI remains controllable, reliable, and aligned with human values?*]()
