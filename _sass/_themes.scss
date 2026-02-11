@@ -3,18 +3,19 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  /* Lilac Dreamer theme (light mode) */
+  --global-bg-color: #{$lilac-dreamer-bg};
+  --global-code-bg-color: #{$lilac-dreamer-code-bg};
+  --global-text-color: #{$lilac-dreamer-text};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$lavender-color-dark};
-  --global-hover-color: #{$purple-color};
+  --global-theme-color: #{$lilac-dreamer-theme};
+  --global-hover-color: #{$lilac-dreamer-theme-dark};
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-divider-color: rgba(177, 156, 217, 0.2);
   --global-card-bg-color: #{$white-color};
 
   --global-tip-block: #42b983;
@@ -53,19 +54,20 @@
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color-light};
-  --global-theme-color: #{$lavender-color};
-  --global-hover-color: #{$lavender-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  /* Smoothie Bar theme (dark mode) */
+  --global-bg-color: #{$smoothie-bar-bg};
+  --global-code-bg-color: #{$smoothie-bar-code-bg};
+  --global-text-color: #{$smoothie-bar-text};
+  --global-text-color-light: #{$smoothie-bar-text};
+  --global-theme-color: #{$smoothie-bar-theme};
+  --global-hover-color: #{$smoothie-bar-theme-light};
+  --global-hover-text-color: #{$smoothie-bar-bg};
+  --global-footer-bg-color: #{$smoothie-bar-card-bg};
+  --global-footer-text-color: #{$smoothie-bar-text};
+  --global-footer-link-color: #{$smoothie-bar-theme-light};
+  --global-distill-app-color: #{$smoothie-bar-text};
+  --global-divider-color: rgba(255, 140, 105, 0.3);
+  --global-card-bg-color: #{$smoothie-bar-card-bg};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;

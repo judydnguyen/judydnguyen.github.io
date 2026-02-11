@@ -1,0 +1,142 @@
+/*******************************************************************************
+ * Gallery Styles
+ ******************************************************************************/
+
+.gallery {
+  margin-top: 2rem;
+
+  .gallery-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--global-text-color-light);
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  .gallery-grid {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .gallery-item {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .gallery-figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    background: var(--global-card-bg-color);
+  }
+
+  .gallery-item:hover .gallery-figure {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+  }
+
+  .gallery-item:hover .gallery-image {
+    transform: scale(1.05);
+  }
+
+  // Dark mode specific adjustments
+  html[data-theme="dark"] & {
+    .gallery-figure {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item:hover .gallery-figure {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+// Override grid-sizer for gallery to create artistic variation
+.gallery-grid {
+  .grid-sizer {
+    width: 250px;
+  }
+
+  .grid-item {
+    width: 250px;
+    
+    // Create artistic variation - some images wider
+    &:nth-child(3n+1) {
+      width: 500px; // Double width for visual interest
+    }
+    
+    &:nth-child(6) {
+      width: 500px; // Special larger item
+    }
+    
+    &:nth-child(9) {
+      width: 500px; // Special larger item
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .grid-sizer {
+      width: calc(50% - 5px);
+    }
+
+    .grid-item {
+      width: calc(50% - 5px);
+      
+      &:nth-child(3n+1),
+      &:nth-child(6),
+      &:nth-child(9) {
+        width: calc(50% - 5px); // Reset to normal on mobile
+      }
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    .grid-sizer {
+      width: calc(33.333% - 7px);
+    }
+
+    .grid-item {
+      width: calc(33.333% - 7px);
+      
+      &:nth-child(3n+1) {
+        width: calc(66.666% - 7px); // Double width
+      }
+      
+      &:nth-child(6),
+      &:nth-child(9) {
+        width: calc(33.333% - 7px); // Reset on tablet
+      }
+    }
+  }
+}

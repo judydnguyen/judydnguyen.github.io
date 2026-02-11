@@ -1,0 +1,28 @@
+# Gallery Images
+# Add your photo filenames here (relative to assets/img/)
+# Images will be displayed in the order listed
+images:
+  - filename: 1.jpg
+    caption: ""
+  - filename: 2.jpg
+    caption: ""
+  - filename: 3.jpg
+    caption: ""
+  - filename: 4.jpg
+    caption: ""
+  - filename: 5.jpg
+    caption: ""
+  - filename: 6.jpg
+    caption: ""
+  - filename: 7.jpg
+    caption: ""
+  - filename: 8.jpg
+    caption: ""
+  - filename: 9.jpg
+    caption: ""
+  - filename: 10.jpg
+    caption: ""
+  - filename: 11.jpg
+    caption: ""
+  - filename: 12.jpg
+    caption: ""

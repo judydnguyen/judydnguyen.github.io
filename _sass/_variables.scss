@@ -24,6 +24,21 @@ $yellow-color: #efcc00 !default;
 $lavender-color: #e84a27 !default;
 $lavender-color-dark: #546DA6 !default;
 
+// Lilac Dreamer theme colors (light mode)
+$lilac-dreamer-bg: #faf8ff !default;
+$lilac-dreamer-theme: #b19cd9 !default;
+$lilac-dreamer-theme-dark: #8b7bb8 !default;
+$lilac-dreamer-text: #4a3f5f !default;
+$lilac-dreamer-code-bg: rgba(177, 156, 217, 0.1) !default;
+
+// Smoothie Bar theme colors (dark mode)
+$smoothie-bar-bg: #2a1f1a !default;
+$smoothie-bar-theme: #ff8c69 !default;
+$smoothie-bar-theme-light: #ffb896 !default;
+$smoothie-bar-text: #f5e6d3 !default;
+$smoothie-bar-code-bg: #3d2f28 !default;
+$smoothie-bar-card-bg: #352822 !default;
+
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark: #1c1c1d;
