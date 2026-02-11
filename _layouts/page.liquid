@@ -1,24 +1,30 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
+<div class="post page-content">
+  <header class="post-header page-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
   </header>
 
-  <article>
+  <article class="page-article">
     {{ content }}
   </article>
 
   {% if page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% bibliography --cited_in_order %}
-    </div>
+    <section class="references-section">
+      <h2>References</h2>
+      <div class="publications">
+        {% bibliography --cited_in_order %}
+      </div>
+    </section>
   {% endif %}
 
   {% if site.giscus and page.giscus_comments %}
-    {% include giscus.liquid %}
+    <section class="comments-section">
+      {% include giscus.liquid %}
+    </section>
   {% endif %}
 </div>

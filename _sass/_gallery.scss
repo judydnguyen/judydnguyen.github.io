@@ -22,7 +22,8 @@
 
   .gallery-grid {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px; // Wider container for landscape images
+    padding: 0 1rem;
   }
 
   .gallery-item {
@@ -58,15 +59,20 @@
 
     img {
       width: 100%;
-      height: auto;
-      object-fit: cover;
+      height: auto; // Maintain original aspect ratio
+      object-fit: contain; // Show full image without cropping
       border-radius: 8px;
       display: block;
+      transition: transform 0.5s ease;
     }
   }
 
   .gallery-item:hover .gallery-image {
-    transform: scale(1.05);
+    transform: scale(1.02); // Subtle zoom
+  }
+  
+  .gallery-item:hover .gallery-image img {
+    transform: scale(1.05); // Slight zoom on image itself
   }
 
   // Dark mode specific adjustments
@@ -81,61 +87,78 @@
   }
 }
 
-// Override grid-sizer for gallery to create artistic variation
+// Gallery grid optimized for landscape images with side-by-side pairs
 .gallery-grid {
   .grid-sizer {
-    width: 250px;
+    width: calc(50% - 10px); // Two columns base
   }
 
   .grid-item {
-    width: 250px;
+    width: calc(50% - 10px); // Default: two images per row
+    margin-bottom: 15px;
     
-    // Create artistic variation - some images wider
-    &:nth-child(3n+1) {
-      width: 500px; // Double width for visual interest
+    // Create visual rhythm: sometimes single wide, sometimes pairs
+    // Every 3rd item is full width (single image row)
+    &:nth-child(3n) {
+      width: calc(100% - 10px); // Full width for emphasis
+      max-width: 1200px;
     }
     
-    &:nth-child(6) {
-      width: 500px; // Special larger item
+    // Every 7th item is also full width
+    &:nth-child(7n) {
+      width: calc(100% - 10px); // Full width showcase
+      max-width: 1200px;
     }
     
-    &:nth-child(9) {
-      width: 500px; // Special larger item
-    }
+    // Every 4th and 5th items stay as pairs (two in a row)
+    // This creates: pair, pair, single, pair, pair, pair, single pattern
   }
 
   // Responsive adjustments
   @media (max-width: 768px) {
     .grid-sizer {
-      width: calc(50% - 5px);
+      width: calc(100% - 10px); // Full width on mobile
     }
 
     .grid-item {
-      width: calc(50% - 5px);
+      width: calc(100% - 10px); // Full width on mobile (single column)
+      margin-bottom: 20px;
       
-      &:nth-child(3n+1),
-      &:nth-child(6),
-      &:nth-child(9) {
-        width: calc(50% - 5px); // Reset to normal on mobile
+      &:nth-child(3n),
+      &:nth-child(7n) {
+        width: calc(100% - 10px); // All full width on mobile
       }
     }
   }
 
   @media (min-width: 769px) and (max-width: 992px) {
     .grid-sizer {
-      width: calc(33.333% - 7px);
+      width: calc(50% - 10px); // Two columns on tablet
     }
 
     .grid-item {
-      width: calc(33.333% - 7px);
+      width: calc(50% - 10px); // Two images per row on tablet
       
-      &:nth-child(3n+1) {
-        width: calc(66.666% - 7px); // Double width
+      &:nth-child(3n),
+      &:nth-child(7n) {
+        width: calc(100% - 10px); // Full width showcase items
       }
+    }
+  }
+
+  @media (min-width: 993px) {
+    // Desktop: maintains the two-per-row with occasional full-width pattern
+    .grid-sizer {
+      width: calc(50% - 10px);
+    }
+
+    .grid-item {
+      width: calc(50% - 10px);
       
-      &:nth-child(6),
-      &:nth-child(9) {
-        width: calc(33.333% - 7px); // Reset on tablet
+      &:nth-child(3n),
+      &:nth-child(7n) {
+        width: calc(100% - 10px);
+        max-width: 1200px;
       }
     }
   }

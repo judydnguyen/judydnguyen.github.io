@@ -1,28 +1,50 @@
 # Gallery Images
-# Add your photo filenames here (relative to assets/img/)
+# You can use either:
+#   - link/url: Full URL to an external image (e.g., "https://example.com/image.jpg")
+#   - filename: Local filename relative to assets/img/ (e.g., "1.jpg")
+# 
+# IMPORTANT: For SharePoint/OneDrive images, you need a DIRECT image URL, not a sharing link!
+# 
+# How to get a direct image URL from SharePoint:
+#   1. Open your SharePoint sharing link in a browser
+#   2. Right-click on the image and select "Open image in new tab" OR
+#   3. Click the three dots (⋯) menu → "Download" → Copy the download URL from browser address bar
+#   4. The direct URL should look like: https://[tenant].sharepoint.com/.../_layouts/15/download.aspx?share=...
+#   5. OR use an image hosting service like Imgur, Cloudinary, or GitHub Releases
+# 
+# Alternative: Upload to GitHub Releases or use Git LFS for large images
+# 
 # Images will be displayed in the order listed
 images:
-  - filename: 1.jpg
+  # Example with external link:
+  # - link: "https://example.com/your-image.jpg"
+  #   caption: "Description of the image"
+  # 
+  # Example with SharePoint direct download link (NOT sharing link):
+  # - link: "https://vanderbilt365-my.sharepoint.com/personal/.../_layouts/15/download.aspx?share=..."
+  #   caption: "Description of the image"
+  # 
+  # Example with local file:
+  # - filename: 1.jpg
+  #   caption: "Description of the image"
+  
+  # TODO: Replace SharePoint sharing link with direct image URL
+  # Current link is a sharing link and won't work. Get the direct URL using instructions above.
+  - link: "https://live.staticflickr.com/65535/55091306945_47ebf97bb5_b.jpg"
+    caption: "New Orleans, marked the first time I attended a research conference in person."
+  - link: "https://live.staticflickr.com/65535/55091218729_613040cca1_b.jpg"
+    caption: "San Diego, right after I presented my paper :-)"
+  - link: "https://live.staticflickr.com/65535/55091218149_4bfddddfef.jpg"
     caption: ""
-  - filename: 2.jpg
+  - link: "https://live.staticflickr.com/65535/55091314115_01ec032c5e_z.jpg"
     caption: ""
-  - filename: 3.jpg
+  - link: "https://live.staticflickr.com/65535/55091156328_d2294173dd_z.jpg"
     caption: ""
-  - filename: 4.jpg
+  - link: "https://live.staticflickr.com/65535/55090070377_d0ffd1367f_z.jpg"
     caption: ""
-  - filename: 5.jpg
+  - link: "https://live.staticflickr.com/65535/55091156128_bfb25b9d71_z.jpg"
     caption: ""
-  - filename: 6.jpg
+  - link: "https://live.staticflickr.com/65535/55091313860_4c60a609f0_z.jpg"
     caption: ""
-  - filename: 7.jpg
-    caption: ""
-  - filename: 8.jpg
-    caption: ""
-  - filename: 9.jpg
-    caption: ""
-  - filename: 10.jpg
-    caption: ""
-  - filename: 11.jpg
-    caption: ""
-  - filename: 12.jpg
+  - link: "https://live.staticflickr.com/65535/55090947241_316b33e05b_z.jpg"
     caption: ""

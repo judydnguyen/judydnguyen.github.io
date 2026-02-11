@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: Contact <a href='#'>dung.t.nguyen (at) vanderbilt.edu.
+background_image: "https://live.staticflickr.com/65535/55091313860_4c60a609f0_z.jpg" # Set to image filename (e.g., "background.jpg") in assets/img/ or full URL
 
 profile:
   align: right

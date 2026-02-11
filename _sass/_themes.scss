@@ -15,7 +15,7 @@
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(177, 156, 217, 0.2);
+  --global-divider-color: #{rgba($lilac-dreamer-theme, 0.2)};
   --global-card-bg-color: #{$white-color};
 
   --global-tip-block: #42b983;
@@ -66,7 +66,7 @@ html[data-theme="dark"] {
   --global-footer-text-color: #{$smoothie-bar-text};
   --global-footer-link-color: #{$smoothie-bar-theme-light};
   --global-distill-app-color: #{$smoothie-bar-text};
-  --global-divider-color: rgba(255, 140, 105, 0.3);
+  --global-divider-color: #{rgba($smoothie-bar-theme, 0.3)};
   --global-card-bg-color: #{$smoothie-bar-card-bg};
 
   --global-tip-block: #42b983;

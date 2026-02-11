@@ -2,7 +2,11 @@
 
 CONFIG_FILE=_config.yml 
 
-/bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
+cd /srv/jekyll
+rm -f Gemfile.lock
+bundle install > /dev/null 2>&1
+
+/bin/bash -c "cd /srv/jekyll && exec bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
 
 while true; do
 
@@ -13,9 +17,11 @@ while true; do
     echo "Change detected to $CONFIG_FILE, restarting Jekyll"
 
     jekyll_pid=$(pgrep -f jekyll)
-    kill -KILL $jekyll_pid
+    if [ ! -z "$jekyll_pid" ]; then
+      kill -KILL $jekyll_pid
+    fi
 
-    /bin/bash -c "rm -f Gemfile.lock && exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
+    /bin/bash -c "cd /srv/jekyll && exec bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling"&
 
   fi
 
