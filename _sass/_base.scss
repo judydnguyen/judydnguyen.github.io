@@ -307,11 +307,13 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 4rem;
     
     .post-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+      padding-top: 1rem;
       
       @media (max-width: 768px) {
-        font-size: 2.25rem;
+        font-size: 2rem;
+        padding-top: 1.5rem;
       }
     }
   }
@@ -336,8 +338,8 @@ ul.task-list input[type="checkbox"] {
   }
   
   .about-content {
-    font-size: 1.1rem;
-    line-height: 1.9;
+    font-size: 1rem;
+    line-height: 1.8;
     
     > p {
       margin-bottom: 1.5rem;
@@ -345,15 +347,15 @@ ul.task-list input[type="checkbox"] {
   }
   
   .social-enhanced {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: var(--global-card-bg-color);
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    // margin-top: 3rem;
+    // padding: 1rem 1.25rem;
+    // background: var(--global-card-bg-color);
+    // border-radius: 12px;
+    // box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     text-align: center;
     
     .contact-icons {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
   }
   
