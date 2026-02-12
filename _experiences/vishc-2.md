@@ -5,6 +5,7 @@ company: "Vinuni-Illinois Smart Health Center"
 location: "Hanoi, Vietnam"
 start_date: "Dec 2021"
 end_date: "Aug 2022"
+year: 2021
 company_url: https://vishc.illinois.edu/
 descriptions:
   - "Developed FedDRL, a deep reinforcement learning-based FL aggregator addressing data heterogeneity and cluster-skewed distributions, outperforming FedAvg and FedProx by up to 4.05% on various datasets."

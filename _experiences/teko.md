@@ -5,6 +5,7 @@ company: "Teko Vietnam, VNLIFE"
 location: "Hanoi, Vietnam"
 start_date: "May 2021"
 end_date: "Dec 2021"
+year: 2021
 company_url: https://career.teko.vn/
 descriptions:
   - "Developed fast, reliable, customizable online storefronts for retail businesses (Front-end)."

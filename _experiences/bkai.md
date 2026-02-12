@@ -5,6 +5,7 @@ company: "BKAI Center"
 location: "Hanoi, Vietnam"
 start_date: "Sep 2019"
 end_date: "Aug 2022"
+year: 2019
 company_url: https://bkai.ai/
 descriptions:
   - "Designed a reinforcement learning-based optimization algorithm for wireless rechargeable sensor networks, optimizing charging locations and times to extend network lifetime by up to 8.29x over existing methods."

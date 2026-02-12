@@ -17,6 +17,7 @@ li,
 span,
 strong {
   color: var(--global-text-color);
+  font-family: 'Libre Baskerville', serif;
 }
 
 hr {
@@ -338,8 +339,8 @@ ul.task-list input[type="checkbox"] {
   }
   
   .about-content {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
     
     > p {
       margin-bottom: 1.5rem;

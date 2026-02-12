@@ -5,6 +5,7 @@ company: "Vinuni-Illinois Smart Health Center"
 location: "Hanoi, Vietnam"
 start_date: "Sep 2022"
 end_date: "July 2023"
+year: 2022
 company_url: https://vishc.illinois.edu/
 descriptions:
   - "Developed a novel imperceptible attack achieving 100% success rates with durable backdoor effects, bypassing defenses in federated learning."

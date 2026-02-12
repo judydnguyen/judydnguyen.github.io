@@ -2,7 +2,7 @@
 layout: page
 title: experiences
 permalink: /experiences/
-description: A showcase of my professional experiences and achievements.
+description: 
 nav: true
 nav_order: 4
 ---

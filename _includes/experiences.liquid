@@ -1,7 +1,8 @@
 <div class="experiences">
   {% if site.experiences %}
     <div class="experiences-list">
-      {% assign sorted_experiences = site.experiences | sort: "start_date" | reverse %}
+      {% comment %} Sort experiences by year (descending) - newest first {% endcomment %}
+      {% assign sorted_experiences = site.experiences | sort: "year" | reverse %}
       {% for experience in sorted_experiences %}
         <div class="experience-item row">
           <!-- Time Section -->

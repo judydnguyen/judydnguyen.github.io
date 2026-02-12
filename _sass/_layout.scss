@@ -6,6 +6,7 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-family: 'Libre Baskerville', serif;
 
   h1,
   h2,
@@ -14,6 +15,7 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
+    font-family: 'Libre Baskerville', serif;
   }
 }
 
@@ -29,6 +31,15 @@ body.sticky-bottom-footer {
 
 .container {
   max-width: $max-content-width;
+}
+
+// Wider container for about page
+.about-page .container {
+  max-width: 1200px; // Increased from default for wider content
+  
+  @media (min-width: 1400px) {
+    max-width: 1400px; // Even wider on large screens
+  }
 }
 
 // Main content wrapper with enhanced styling
