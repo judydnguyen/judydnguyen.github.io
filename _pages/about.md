@@ -15,11 +15,11 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I'm Judy | CS Ph.D. student @ Vanderbilt | [SoICT](https://soict.hust.edu.vn/en/) alum | [VinUni](https://vinuni.edu.vn/) research alum | Vietnamese blood in me.
-Advised by [Prof. Taylor T. Johnson](http://www.taylortjohnson.com/) & [Prof. Kevin Leach](https://kjl.name/).
+I'm Judy | CS Ph.D. student @ Vanderbilt, advised by [Prof. Taylor T. Johnson](http://www.taylortjohnson.com/) & [Prof. Kevin Leach](https://kjl.name/) | [SoICT](https://soict.hust.edu.vn/en/) alum | [VinUni](https://vinuni.edu.vn/) research alum | Vietnamese blood in me.
+I was lucky to spend the past two summers at the [Center for AI Safety](https://safe.ai/) and [Microsoft Research](https://www.microsoft.com/en-us/research/).
 
-**About myself.** As a child, I was drawn to science-fiction films about sentient machines. What fascinated me also unsettled me: the idea that humanity might create intelligence it could not fully understand or control. Over time, that quiet unease evolved into a habit of questioning not just what AI systems can do, but how they behave under uncertainty and failure. What once felt like overthinking now intertwines with my research perspective: <span style="color: var(--global-theme-color);">Ensuring control, reliability, and alignment with human values is just as essential as improving performance.</span>
+**About myself.** Amid the accelerating AI race, AI has made knowledge more accessible and complex ideas easier to grasp. Yet, a question lingers: **How much do we truly understand about the LLMs and AI agents we increasingly rely on?** As we equip them with more powerful tools and more autonomy, **is our ability to understand, oversee, and control their behavior keeping pace?**
 
-**About myself (more technically).** My research explores *security, privacy, and ethical vulnerabilities in AI systems*, and is now expanding toward the *safety and alignment of large language models and agents*. 
+These questions have shaped my curiosity and research direction. I study the <span style="color: var(--global-theme-color);">**cybersecurity threats and safety risks**</span> of AI systems, from prompt injection and privacy leakage to rogue agent behaviors and misalignment, so that <span style="color: var(--global-theme-color);">progress does not come at the cost of security, safety, and meaningful human control.</span>
 
 **Beyond research.** I’m passionate about photography, books, and music, and I *almost* never say no to a new adventure. You can call me Judy; my Vietnamese name is Dung, pronounced */zʊŋ/*.

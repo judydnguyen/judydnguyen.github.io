@@ -1,15 +1,9 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
-// Toggle through light, dark, and system theme settings.
+// Switch between light (dawn) and dark (dusk), starting from whatever is shown now.
 let toggleThemeSetting = () => {
-  let themeSetting = determineThemeSetting();
-  if (themeSetting == "system") {
-    setThemeSetting("light");
-  } else if (themeSetting == "light") {
-    setThemeSetting("dark");
-  } else {
-    setThemeSetting("system");
-  }
+  let currentTheme = document.documentElement.getAttribute("data-theme");
+  setThemeSetting(currentTheme == "dark" ? "light" : "dark");
 };
 
 // Change the theme setting and apply the theme.

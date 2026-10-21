@@ -34,12 +34,12 @@ body.sticky-bottom-footer {
 }
 
 // Wider container for about page
-.about-page .container {
-  max-width: 1200px; // Increased from default for wider content
-  
-  @media (min-width: 1400px) {
-    max-width: 1400px; // Even wider on large screens
-  }
+.container.about-container {
+  max-width: 960px;
+}
+
+.container.gallery-container {
+  max-width: 1100px;
 }
 
 // Main content wrapper with enhanced styling

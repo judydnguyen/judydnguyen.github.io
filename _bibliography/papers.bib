@@ -3,6 +3,37 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{nguyen2026infuse,
+  title={{INFUSE}: A Unified Surface Benchmark for Indirect Prompt Injection in Agentic Systems},
+  author={Nguyen, Thuy Dung and Guo, Jingyi and Dubauskas, Rana Seda and Damuluru, Sreepriya and Johnson, Taylor T. and Leach, Kevin},
+  journal={arXiv preprint arXiv:2610.20776},
+  year={2026},
+  month={oct},
+  abbr={arXiv},
+  abstract={INFUSE is an end-to-end benchmark for indirect prompt injection (IPI) across long-horizon agent workflows. It plants adversarial instructions in the files, configs, file names, and archives a coding agent reads, then measures both whether the agent obeys and whether it still finishes the task. INFUSE covers 40 realistic tasks and 56 attack scenarios spanning five threat categories. Evaluating 19 LLMs over 41,824 adversarial trajectories, we find per-model attack success ranging from 3.2% to 41.9%, limited protection from existing guard models, and substantial, model-dependent security-utility trade-offs for defenses.},
+  pdf={https://arxiv.org/abs/2610.20776},
+  code={https://github.com/judydnguyen/infuse},
+  selected={true},
+  preview={infuse.png}
+}
+
+@inproceedings{nguyen2026sugar,
+  abbr={WACV},
+  title={{SUGAR}: A Sweeter Spot for Generative Unlearning of Many Identities},
+  author={Nguyen, Dung Thuy and Nguyen, Quang and Robinette, Preston K. and Jiang, Eli and Johnson, Taylor T. and Leach, Kevin},
+  booktitle={2026 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={2731--2740},
+  year={2026},
+  month={mar},
+  doi={10.1109/WACV61042.2026.00268},
+  abstract={Recent advances in 3D-aware generative models have enabled high-fidelity image synthesis of human identities. However, this progress raises urgent questions around user consent and the ability to remove specific individuals from a model’s output space. We address this by introducing SUGAR, a framework for scalable generative unlearning that enables the removal of many identities (simultaneously or sequentially) without retraining the entire model. Rather than projecting unwanted identities to unrealistic outputs or relying on static template faces, SUGAR learns a personalized surrogate latent for each identity, diverting reconstructions to visually coherent alternatives while preserving the model’s quality and diversity. We further introduce a continual utility preservation objective that guards against degradation as more identities are forgotten. SUGAR achieves state-of-the-art performance in removing up to 200 identities, while delivering up to a 700% improvement in retention utility compared to existing baselines.},
+  organization={IEEE},
+  pdf={https://ieeexplore.ieee.org/abstract/document/11492555},
+  code={https://github.com/judydnguyen/SUGAR-Generative-Unlearn},
+  selected={true},
+  preview={sugar.png}
+}
+
 @inproceedings{nguyen2022feddrl,
   abbr={ICPP},
   title={Feddrl: Deep reinforcement learning-based adaptive aggregation for non-iid data in federated learning},

@@ -110,10 +110,15 @@
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->
             <li class="toggle-container">
-              <button id="light-toggle" title="Change theme">
-                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
-                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
-                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              <button id="light-toggle" class="theme-switch" title="Switch between dawn and dusk" aria-label="Switch between dawn and dusk">
+                <span class="theme-switch-label theme-switch-dawn">dawn</span>
+                <span class="theme-switch-track" aria-hidden="true">
+                  <span class="theme-switch-thumb">
+                    <i class="ti ti-sun-filled theme-switch-sun"></i>
+                    <i class="ti ti-moon-filled theme-switch-moon"></i>
+                  </span>
+                </span>
+                <span class="theme-switch-label theme-switch-dusk">dusk</span>
               </button>
             </li>
           {% endif %}

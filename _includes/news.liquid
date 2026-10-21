@@ -1,10 +1,14 @@
 <div class="news">
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
+    {% assign news_scrollable = false %}
+    {% if include.limit and site.announcements.scrollable and news_size > 6 %}
+      {% assign news_scrollable = true %}
+    {% endif %}
     <div
       class="table-responsive"
-      {% if include.limit and site.announcements.scrollable and news_size > 3 %}
-        style="max-height: 60vw"
+      {% if news_scrollable %}
+        id="news-scroll" style="max-height: 22rem; overflow-y: auto"
       {% endif %}
     >
       <table class="table table-sm table-borderless">
@@ -28,6 +32,24 @@
         {% endfor %}
       </table>
     </div>
+    {% if news_scrollable %}
+      <script>
+        // Size the news box to show exactly the first 6 items, then scroll.
+        (function () {
+          function fitNews() {
+            var box = document.getElementById('news-scroll');
+            if (!box) return;
+            var rows = box.querySelectorAll('tr');
+            if (rows.length <= 6) return;
+            var height = rows[6].getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
+            box.style.maxHeight = height + 'px';
+          }
+          document.addEventListener('DOMContentLoaded', fitNews);
+          window.addEventListener('load', fitNews);
+          window.addEventListener('resize', fitNews);
+        })();
+      </script>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}

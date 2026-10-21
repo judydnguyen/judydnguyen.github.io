@@ -184,7 +184,7 @@ collections:
 
 announcements:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: true # shows 6 news items, then adds a vertical scroll bar
   limit:  # leave blank to include all the news in the `_news` folder
 
 services:
@@ -325,6 +325,8 @@ scholar:
   details_link: Details
 
   query: "@*"
+  sort_by: year,month
+  order: descending
   group_by: year
   group_order: descending
 

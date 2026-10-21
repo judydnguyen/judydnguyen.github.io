@@ -20,6 +20,12 @@ strong {
   font-family: 'Libre Baskerville', serif;
 }
 
+// MDB sets body text to weight 300, so "bolder" only reaches 400; force real bold
+b,
+strong {
+  font-weight: 700;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
   margin: 2rem 0;
@@ -341,7 +347,12 @@ ul.task-list input[type="checkbox"] {
   .about-content {
     font-size: 0.95rem;
     line-height: 1.7;
-    
+
+    // Keep the color of highlighted spans on bold text
+    strong {
+      color: inherit;
+    }
+
     > p {
       margin-bottom: 1.5rem;
     }
@@ -548,6 +559,98 @@ ul.task-list input[type="checkbox"] {
 
   &:hover {
     color: var(--global-hover-color);
+  }
+}
+
+// Dawn/dusk theme switch in the navbar
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
+
+#light-toggle.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible .theme-switch-track {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  .theme-switch-label {
+    font-size: 0.8rem;
+    color: var(--global-text-color-light);
+    transition: color 0.3s ease;
+  }
+
+  .theme-switch-track {
+    position: relative;
+    width: 42px;
+    height: 22px;
+    border-radius: 11px;
+    background-color: var(--global-divider-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .theme-switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffd27f, #ff8a65);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.35s ease, background 0.35s ease;
+
+    i {
+      font-size: 11px;
+      line-height: 1;
+      color: #fff;
+    }
+  }
+
+  .theme-switch-moon {
+    display: none;
+  }
+
+  &:hover .theme-switch-track {
+    background-color: rgba(127, 127, 127, 0.3);
+  }
+}
+
+// Dawn (light) is active by default
+html:not([data-theme="dark"]) #light-toggle .theme-switch-dawn {
+  color: var(--global-theme-color);
+}
+
+html[data-theme="dark"] #light-toggle {
+  .theme-switch-dusk {
+    color: var(--global-theme-color);
+  }
+
+  .theme-switch-thumb {
+    transform: translateX(20px);
+    background: linear-gradient(135deg, #8b7bd8, #2b2161);
+  }
+
+  .theme-switch-sun {
+    display: none;
+  }
+
+  .theme-switch-moon {
+    display: inline;
   }
 }
 
@@ -1097,7 +1200,7 @@ html.transition *:after {
   }
   
   .post-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
     background: linear-gradient(
@@ -1110,12 +1213,12 @@ html.transition *:after {
     background-clip: text;
     
     @media (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
   
   .post-description {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     color: var(--global-text-color-light);
     margin-top: 0.5rem;
@@ -1123,8 +1226,21 @@ html.transition *:after {
 }
 
 .page-article {
-  line-height: 1.8;
-  font-size: 1.05rem;
+  line-height: 1.7;
+  font-size: 0.95rem;
+
+  td,
+  th {
+    font-size: inherit;
+  }
+
+  h2.category {
+    font-size: 1.4rem;
+  }
+
+  .experiences h4 {
+    font-size: 1.2rem;
+  }
   
   // Enhanced section styling
   > h2 {
@@ -1446,4 +1562,63 @@ swiper-container {
   --swiper-navigation-color: var(--global-theme-color);
   --swiper-pagination-color: var(--global-theme-color);
   --swiper-pagination-bullet-inactive-color: var(--global-text-color);
+}
+
+// Selected papers on the about page: bordered cards in a grid
+
+.papers-section .publications {
+  ol.bibliography {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+
+    li {
+      margin-bottom: 0;
+      padding: 1.25rem 1.5rem;
+      background-color: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 10px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        border-color: var(--global-theme-color);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+      }
+
+      > .row {
+        display: block;
+        margin: 0;
+
+        > [class*="col-"] {
+          max-width: 100%;
+          padding: 0;
+        }
+      }
+
+      .preview {
+        width: 100%;
+        max-width: none;
+        height: 140px;
+        object-fit: contain;
+        background-color: $white-color;
+        margin-bottom: 1rem;
+      }
+
+      .title {
+        color: var(--global-theme-color);
+        font-size: 1.05rem;
+        line-height: 1.35;
+        margin-bottom: 0.5rem;
+      }
+
+      .author,
+      .periodical {
+        font-size: 0.9rem;
+      }
+
+      .links {
+        margin-top: 0.75rem;
+      }
+    }
+  }
 }

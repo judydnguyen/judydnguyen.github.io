@@ -8,9 +8,7 @@ end_date: "Dec 2022"
 year: 2022
 company_url: https://www.aist.go.jp/index_en.html
 descriptions:
-  - "Developed FedGrad, a defense achieving a 90% reduction in attack success rates."
-  - "Designed methods for near-perfect malicious participant detection in federated learning systems."
-  - "Demonstrated robust performance of FedGrad against advanced attacks, even with 50% malicious clients under heterogeneous data settings."
+  - "Studied vulnerabilities in distributed training systems and built FedGrad, a penultimate-layer signal–based defense that reduces attack success by 90% and detects nearly all malicious clients, safeguarding FL systems even when up to 50% of clients are adversaries and data is highly non-IID."
 skills: "Federated learning, adversarial machine learning, defense mechanisms, heterogeneous data, AI research"
 image: "/assets/images/ai_research_intern_aist.jpg"
 ---
