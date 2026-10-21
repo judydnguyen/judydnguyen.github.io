@@ -64,16 +64,37 @@ nav_order: 5
 </div>
 
 <script>
-  // Give each tile its photo's aspect ratio so rows line up at an even height.
-  document.querySelectorAll('.gallery-tile:not(.gallery-tile--featured) img').forEach(function (img) {
-    function setRatio() {
-      if (img.naturalWidth && img.naturalHeight) {
-        img.parentElement.style.setProperty('--r', (img.naturalWidth / img.naturalHeight).toFixed(3));
-      }
+  // Size each tile from its photo's aspect ratio so rows line up at an even height.
+  (function () {
+    var gallery = document.querySelector('.gallery');
+    var tiles = document.querySelectorAll('.gallery-tile:not(.gallery-tile--featured)');
+    if (!gallery || !tiles.length) return;
+
+    function rowHeight() {
+      return parseFloat(getComputedStyle(gallery).getPropertyValue('--row-height')) || 260;
     }
-    if (img.complete) setRatio();
-    else img.addEventListener('load', setRatio);
-  });
+
+    function sizeTile(tile) {
+      var ratio = parseFloat(tile.style.getPropertyValue('--r')) || 1.5;
+      tile.style.flexBasis = ratio * rowHeight() + 'px';
+    }
+
+    tiles.forEach(function (tile) {
+      var img = tile.querySelector('img');
+      function setRatio() {
+        if (img.naturalWidth && img.naturalHeight) {
+          tile.style.setProperty('--r', (img.naturalWidth / img.naturalHeight).toFixed(3));
+        }
+        sizeTile(tile);
+      }
+      if (img.complete) setRatio();
+      else img.addEventListener('load', setRatio);
+    });
+
+    window.addEventListener('resize', function () {
+      tiles.forEach(sizeTile);
+    });
+  })();
 
   // Lightbox: shows the whole, uncropped photo with its caption.
   (function () {

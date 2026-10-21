@@ -42,7 +42,11 @@
 .gallery .gallery-tile {
   --r: 1.5;
   position: relative;
-  flex: var(--r) 1 calc(var(--r) * var(--row-height));
+  // flex-basis (ratio × row height) is set by the gallery script; the production
+  // CSS minifier breaks calc() with custom properties, so it is not computed here.
+  flex-grow: var(--r);
+  flex-shrink: 1;
+  flex-basis: 390px;
   aspect-ratio: var(--r);
   margin: 0;
   overflow: hidden;
