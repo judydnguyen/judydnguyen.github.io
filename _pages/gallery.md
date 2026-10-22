@@ -23,6 +23,11 @@ nav_order: 5
         {% else %}
           {% assign image_path = 'assets/img/' | append: image.filename | relative_url %}
         {% endif %}
+        {% assign flickr_url = nil %}
+        {% if image_path contains 'staticflickr.com' %}
+          {% assign flickr_id = image_path | split: '/' | last | split: '_' | first %}
+          {% assign flickr_url = 'https://www.flickr.com/photo.gne?id=' | append: flickr_id %}
+        {% endif %}
         {% if image.caption and image.caption != '' %}
           {% assign image_alt = image.caption %}
         {% else %}
@@ -39,9 +44,15 @@ nav_order: 5
             {% endif %}
             referrerpolicy="no-referrer"
           >
-          <button type="button" class="gallery-view" aria-label="View full image">
-            <i class="ti ti-arrows-maximize"></i> View full image
-          </button>
+          {% if flickr_url %}
+            <a class="gallery-view" href="{{ flickr_url }}" target="_blank" rel="noopener" aria-label="View full image on Flickr">
+              <i class="ti ti-arrows-maximize"></i> View full image
+            </a>
+          {% else %}
+            <button type="button" class="gallery-view" aria-label="View full image">
+              <i class="ti ti-arrows-maximize"></i> View full image
+            </button>
+          {% endif %}
           {% if image.caption and image.caption != '' %}
             <figcaption>{{ image.caption }}</figcaption>
           {% endif %}
@@ -126,7 +137,9 @@ nav_order: 5
     }
 
     tiles.forEach(function (tile, index) {
-      tile.addEventListener('click', function () {
+      tile.addEventListener('click', function (e) {
+        // The Flickr link opens in a new tab instead of the lightbox
+        if (e.target.closest('a.gallery-view')) return;
         open(index);
       });
     });
