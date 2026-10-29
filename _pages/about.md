@@ -18,7 +18,11 @@ social: true # includes social icons at the bottom of the page
 I'm Judy | CS Ph.D. student @ Vanderbilt, advised by [Prof. Taylor T. Johnson](http://www.taylortjohnson.com/) & [Prof. Kevin Leach](https://kjl.name/) | [SoICT](https://soict.hust.edu.vn/en/) alum | [VinUni](https://vinuni.edu.vn/) research alum | Vietnamese blood in me.
 I was lucky to spend the past two summers at the [Center for AI Safety](https://safe.ai/) and [Microsoft Research](https://www.microsoft.com/en-us/research/).
 
-**About myself.** AI has made knowledge way more accessible, opening up and facilitating brilliant ideas that once seemed beyond our reach. Yet, as LLMs and AI agents become part of our everyday lives, one question keeps floating over my mind: **How much do we truly and responsibly understand about the LLMs and AI agents we increasingly rely on?** As we give them more powerful tools and greater freedom to act, **is our ability to understand, oversee, and control their behavior keeping pace?** These questions stay with me, shaping both my curiosity and the research I choose to pursue.
+**About myself.** AI has made information way more accessible, opening up and facilitating brilliant ideas that once seemed beyond our reach. Yet, as LLMs and AI agents become part of our everyday lives, one question keeps floating through my mind: **How much do we truly understand about the agents we increasingly rely on and the risks they encounter as they interact with the world?** As we give them more powerful tools and greater freedom to act, **is our ability to secure, understand, oversee, and control their behavior keeping pace?** These questions stay with me, shaping both my curiosity and the research I choose to pursue.
+
+<a href="{{ '/assets/img/trustworthy-agents.webp' | relative_url }}" target="_blank" rel="noopener" class="research-map">
+  <img src="{{ '/assets/img/trustworthy-agents.webp' | relative_url }}" alt="Trustworthy AI Agents at the intersection of AI Security, AI Safety, and Evaluation & Trustworthiness" loading="lazy">
+</a>
 
 I study the <span style="color: var(--global-theme-color);">**cybersecurity threats and safety risks**</span> of AI systems, from prompt injection and privacy leakage to rogue agent behaviors and misalignment, so that <span style="color: var(--global-theme-color);">progress does not come at the cost of security, safety, and meaningful human control.</span>
 
